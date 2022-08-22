@@ -4,7 +4,7 @@ using static UnityEngine.InputSystem.InputAction;
 public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 3f;
-    
+
     private Vector2 movementVector = Vector2.zero;
     private Rigidbody2D rb;
 
@@ -22,4 +22,11 @@ public class PlayerInput : MonoBehaviour
         movementVector = context.ReadValue<Vector2>();
     }
 
+    public void Interact(CallbackContext context)
+    {
+        if (context.performed)
+        {
+            //interact
+        }
+    }
 }
